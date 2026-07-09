@@ -1,54 +1,53 @@
 /* ============================================================
    NEXTECH — DESIGN TOKENS
-   Basé sur DESIGN_SYSTEM.md (v2)
-   À importer en premier, avant tout autre fichier CSS.
+   Based on DESIGN_SYSTEM.md (
    ============================================================ */
 
 :root {
 
-  /* ---------- COULEURS — Rôles ---------- */
-  --color-primary: #0055FF;        /* Bleu Tech — liens, interactions secondaires */
-  --color-secondary: #003087;      /* Bleu Marine — header, footer, nav */
-  --color-tertiary: #4DA6FF;       /* Bleu Ciel — hover, gradients, badges info */
+  /* ---------- Colors — Roles ---------- */
+  --color-primary: #0055FF;        
+  --color-secondary: #003087;
+  --color-tertiary: #4DA6FF;       
 
-  --color-bg: #FFFFFF;             /* Blanc Pur — fond principal */
-  --color-bg-alt: #F0F4F8;         /* Gris Léger — sections alternées */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F0F4F8; 
 
-  --color-text: #1A202C;           /* Anthracite — texte principal */
-  --color-text-muted: #718096;     /* Gris Moyen — texte secondaire */
+  --color-text: #1A202C;
+  --color-text-muted: #71
 
-  --color-accent: #FF6B00;         /* Orange Énergie — CTA uniquement */
-  --color-accent-2: #00D4FF;       /* Cyan Électrique — décoratif uniquement */
+  --color-accent: #FF6B00; 
+  --color-accent-2: #00D4FF;      
 
-  /* Texte à utiliser SUR les fonds accent — jamais de blanc sur orange/vert */
+  /* Text to use on accent backgrounds — never white on orange/green */
   --color-on-accent: var(--color-text);
 
-  /* ---------- COULEURS — Feedback système ---------- */
+  /* ---------- Colors — System feedback ---------- */
   --color-success: #38A169;
   --color-error: #E53E3E;
   --color-warning: #ECC94B;
   --color-info: #3182CE;
 
-  /* ---------- COULEURS — Canal de contact ---------- */
-  --color-whatsapp: #25D366; /* couleur officielle, très reconnue au Cameroun */
+  /* ---------- Colors — Contact channel ---------- */
+  --color-whatsapp: #25D366; 
 
-  /* ---------- TYPOGRAPHIE — Familles ---------- */
+  /* ---------- Typography — Font families ---------- */
   --font-heading: 'Exo 2', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-display: 'Orbitron', sans-serif; /* Hero H1 / logo / badge uniquement */
+  --font-display: 'Orbitron', sans-serif; 
 
-  /* ---------- TYPOGRAPHIE — Échelle ---------- */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
-  --text-5xl: 3rem;      /* 48px */
+  /* ---------- Typography — Scale ---------- */
+  --text-xs: 0.75rem;   
+  --text-sm: 0.875rem;  
+  --text-base: 1rem;    
+  --text-lg: 1.125rem;  
+  --text-xl: 1.25rem;   
+  --text-2xl: 1.5rem;   
+  --text-3xl: 1.875rem; 
+  --text-4xl: 2.25rem;  
+  --text-5xl: 3rem;      
 
-  /* ---------- TYPOGRAPHIE — Graisses ---------- */
+  /* ---------- Typography — Weights ---------- */
   --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
@@ -60,15 +59,15 @@
   --leading-relaxed: 1.7;
 
   /* ---------- ESPACEMENT (base 4px) ---------- */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-24: 6rem;     /* 96px */
+  --space-1: 0.25rem;  
+  --space-2: 0.5rem;   
+  --space-3: 0.75rem;   
+  --space-4: 1rem;      
+  --space-6: 1.5rem;    
+  --space-8: 2rem;      
+  --space-12: 3rem;     
+  --space-16: 4rem;     
+  --space-24: 6rem;     
 
   /* ---------- RAYONS ---------- */
   --radius-sm: 4px;
@@ -82,7 +81,7 @@
   --shadow-lg: 0 10px 24px rgba(26, 32, 44, 0.14);
 
   /* ---------- CONTENEUR / LAYOUT ---------- */
-  --container-max: 1280px;
+  --container-max: 1920px;
   --container-padding: var(--space-4);
 
   /* ---------- TRANSITIONS ---------- */
@@ -91,7 +90,7 @@
 }
 
 /* ============================================================
-   RESET DE BASE — à garder minimal, juste ce qu'il faut
+   Basic reset — keep it minimal, only what you need
    ============================================================ */
 
 *,
@@ -130,14 +129,14 @@ a {
   text-decoration: none;
 }
 
-/* ---------- Classe utilitaire container ---------- */
+/* ---------- Container utility class ---------- */
 .container {
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--container-padding);
 }
 
-/* ---------- Classe utilitaire accessibilité ---------- */
+/* ---------- Accessibility utility class ---------- */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -151,11 +150,11 @@ a {
 }
 /* ============================================================
    NEXTECH — STYLES.CSS
-   Nécessite design-tokens.css chargé AVANT ce fichier.
+   Requires design-tokens.css loaded BEFORE this file.
    ============================================================ */
 
 /* ============================================================
-   BOUTONS — composant réutilisé partout
+   BUTTONS — reusable component everywhere
    ============================================================ */
 
 .btn {
@@ -400,7 +399,7 @@ a {
 }
 
 /* ============================================================
-   SECTION HEADER (réutilisé : catégories, avantages, avis, FAQ)
+   SECTION HEADER (reused: categories, benefits, reviews, FAQ)
    ============================================================ */
 
 .section-header {
@@ -460,7 +459,7 @@ a {
 }
 
 /* ============================================================
-   PRODUIT VEDETTE
+   FEATURED PRODUCT
    ============================================================ */
 
 .featured-product {
@@ -612,7 +611,7 @@ a {
 }
 
 /* ============================================================
-   TEMOIGNAGES
+   TESTIMONIALS
    ============================================================ */
 
 .testimonials {
@@ -874,7 +873,7 @@ a {
 }
 
 /* ============================================================
-   HERO — mini stats + icônes
+   HERO — mini stats + icons
    ============================================================ */
 
 .hero__mini-stats {
@@ -1135,7 +1134,7 @@ a {
 }
 
 /* ============================================================
-   PRODUIT VEDETTE — specs list + icônes
+   FEATURED PRODUCT — specs list + icons
    ============================================================ */
 
 .featured-product__specs {
@@ -1286,7 +1285,7 @@ a {
 }
 
 /* ============================================================
-   TEMOIGNAGES — icônes citation + avatar initiales
+   TESTIMONIALS — quote icons + avatar initials
    ============================================================ */
 
 .testimonial-card {
@@ -1356,7 +1355,7 @@ a {
 }
 
 /* ============================================================
-   HEADER — icônes (ajustements)
+   HEADER — icons (adjustments)
    ============================================================ */
 
 .icon-btn i {
@@ -1377,7 +1376,7 @@ a {
 }
 
 /* ============================================================
-   FOOTER — icônes contact/localisation
+   FOOTER — contact/location icons
    ============================================================ */
 
 .footer__col ul i {
@@ -1421,7 +1420,7 @@ a {
 }
 
 /* ============================================================
-   STICKY CTA MOBILE — masqué par défaut
+   STICKY MOBILE CTA — hidden by default
    ============================================================ */
 
 .sticky-cta {
@@ -1437,11 +1436,11 @@ a {
 }
 
 /* ============================================================
-   RESPONSIVE — MOBILE FIRST (breakpoints en max-width
-   car le CSS ci-dessus est pensé desktop ; on réduit ensuite)
+   RESPONSIVE — Mobile first (breakpoints in max-width
+   because the CSS above is designed for desktop; we reduce later)
    ============================================================ */
 
-/* Tablette */
+/* Tablet */
 @media (max-width: 1024px) {
   .hero__inner,
   .featured-product__inner,
@@ -1467,7 +1466,7 @@ a {
   }
 }
 
-/* Mobile large */
+/* Large mobile */
 @media (max-width: 768px) {
   .primary-nav {
     display: none;
@@ -1536,7 +1535,7 @@ a {
     display: block;
   }
 
-  /* Espace en bas de page pour ne pas cacher le footer sous le sticky CTA */
+  /* Extra bottom space so the footer isn't hidden under the sticky CTA */
   .site-footer {
     padding-bottom: var(--space-16);
   }
@@ -1563,7 +1562,7 @@ a {
   }
 }
 
-/* Mobile petit */
+/* Small mobile */
 @media (max-width: 480px) {
   .hero__title {
     font-size: var(--text-2xl);
