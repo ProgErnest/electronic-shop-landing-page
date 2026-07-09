@@ -4,13 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NexTech — Votre technologie, sans compromis</title>
-  <meta name="description" content="Découvrez notre sélection d'appareils électroniques testés, garantis et livrés en 48h. Plus de 12 000 clients satisfaits.">
+  <meta name="description" content="Boutique d'électronique au Cameroun. Smartphones, ordinateurs, audio et maison connectée. Livraison 48h à Douala et Yaoundé, paiement Orange Money & MTN MoMo.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <link rel="stylesheet" href="design-tokens.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
+
+  <!-- ==================== BANDEAU D'ANNONCE ==================== -->
+  <div class="announcement-bar">
+    <p>
+      <i class="ph ph-truck"></i>
+      Livraison gratuite dès 50 000 FCFA partout au Cameroun
+      <span class="announcement-bar__sep">·</span>
+      <i class="ph ph-device-mobile"></i>
+      Paiement Orange Money &amp; MTN MoMo accepté
+    </p>
+  </div>
 
   <!-- ==================== HEADER / NAVIGATION ==================== -->
   <header class="site-header">
@@ -18,15 +35,15 @@
       <a href="/" class="logo">NexTech</a>
 
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
+        <i class="ph ph-list nav-toggle__icon-open"></i>
+        <i class="ph ph-x nav-toggle__icon-close"></i>
       </button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <ul class="primary-nav__list">
           <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#produits">Produits</a></li>
+          <li><a href="#ventes">Meilleures ventes</a></li>
+          <li><a href="#produits">Catégories</a></li>
           <li><a href="#promotions">Promotions</a></li>
           <li><a href="#avis">Avis clients</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -35,9 +52,10 @@
       </nav>
 
       <div class="header__actions">
-        <button class="icon-btn" aria-label="Rechercher">🔍</button>
+        <button class="icon-btn" aria-label="Rechercher"><i class="ph ph-magnifying-glass"></i></button>
+        <button class="icon-btn" aria-label="Mon compte"><i class="ph ph-user"></i></button>
         <button class="icon-btn cart-btn" aria-label="Panier">
-          🛒 <span class="cart-badge">0</span>
+          <i class="ph ph-shopping-cart"></i> <span class="cart-badge">0</span>
         </button>
       </div>
     </div>
@@ -53,11 +71,27 @@
           <h1 class="hero__title">Votre technologie, sans compromis.</h1>
           <p class="hero__subtitle">
             Des appareils électroniques testés, garantis et livrés chez vous
-            en 48h. Rejoignez plus de 12 000 clients satisfaits.
+            en 48h à Douala et Yaoundé. Rejoignez plus de 12 000 clients
+            satisfaits à travers tout le Cameroun.
           </p>
           <div class="hero__actions">
-            <a href="#produits" class="btn btn--primary">Découvrir la sélection →</a>
+            <a href="#ventes" class="btn btn--primary">Découvrir la sélection <i class="ph ph-arrow-right"></i></a>
             <a href="#promotions" class="btn btn--secondary">Voir les meilleures ventes</a>
+          </div>
+
+          <div class="hero__mini-stats">
+            <div class="mini-stat">
+              <i class="ph ph-storefront"></i>
+              <div><strong>2</strong><span>Boutiques physiques</span></div>
+            </div>
+            <div class="mini-stat">
+              <i class="ph ph-users-three"></i>
+              <div><strong>12 000+</strong><span>Clients satisfaits</span></div>
+            </div>
+            <div class="mini-stat">
+              <i class="ph ph-star-fill"></i>
+              <div><strong>4.8/5</strong><span>Note moyenne</span></div>
+            </div>
           </div>
         </div>
 
@@ -71,20 +105,166 @@
     <section class="trust-bar" aria-label="Garanties et services">
       <div class="container trust-bar__inner">
         <div class="trust-item">
-          <span class="trust-item__icon" aria-hidden="true">🚚</span>
+          <i class="ph ph-truck trust-item__icon"></i>
           <span>Livraison offerte dès 50 000 FCFA</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item__icon" aria-hidden="true">🔒</span>
+          <i class="ph ph-lock-key trust-item__icon"></i>
           <span>Paiement 100% sécurisé</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item__icon" aria-hidden="true">↩️</span>
+          <i class="ph ph-arrow-counter-clockwise trust-item__icon"></i>
           <span>Retours gratuits sous 14 jours</span>
         </div>
         <div class="trust-item">
-          <span class="trust-item__icon" aria-hidden="true">🛡️</span>
+          <i class="ph ph-shield-check trust-item__icon"></i>
           <span>Garantie constructeur 2 ans</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MARQUES PARTENAIRES ==================== -->
+    <section class="brands" aria-label="Marques disponibles">
+      <div class="container">
+        <p class="brands__label">Produits officiels des plus grandes marques</p>
+        <div class="brands__row">
+          <span class="brand-name">Samsung</span>
+          <span class="brand-name">Xiaomi</span>
+          <span class="brand-name">JBL</span>
+          <span class="brand-name">HP</span>
+          <span class="brand-name">Tecno</span>
+          <span class="brand-name">Infinix</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MEILLEURES VENTES ==================== -->
+    <section class="products" id="ventes">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Nos meilleures ventes</h2>
+          <p class="section-header__subtitle">Les produits préférés de nos clients ce mois-ci</p>
+        </header>
+
+        <div class="products__grid">
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge--bestseller">Bestseller</span>
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-earbuds.jpeg" alt="Écouteurs sans fil AirBeat Pro" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Écouteurs sans fil AirBeat Pro</h3>
+              <div class="product-card__rating" aria-label="Note 4.7 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-half"></i>
+                <span>(312)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price">18 500 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge--new">Nouveau</span>
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-smartphone.jpeg" alt="Smartphone Galaxy Vision 12" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Smartphone Galaxy Vision 12</h3>
+              <div class="product-card__rating" aria-label="Note 4.9 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+                <span>(198)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price">145 000 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge--popular">Populaire</span>
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-solar-charger.jpeg" alt="Chargeur solaire portable SunCharge" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Chargeur solaire SunCharge</h3>
+              <div class="product-card__rating" aria-label="Note 4.6 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-half"></i>
+                <span>(267)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price">12 000 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-speaker.jpeg" alt="Enceinte Bluetooth BoomBox Mini" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Enceinte BoomBox Mini</h3>
+              <div class="product-card__rating" aria-label="Note 4.5 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star"></i>
+                <span>(145)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price">22 000 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge--promo">-15%</span>
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-smartwatch.jpeg" alt="Montre connectée FitTrack 2" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Montre connectée FitTrack 2</h3>
+              <div class="product-card__rating" aria-label="Note 4.4 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star"></i>
+                <span>(89)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price-old">33 500 FCFA</span>
+                <span class="product-card__price">28 500 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <button class="wishlist-btn" aria-label="Ajouter aux favoris"><i class="ph ph-heart"></i></button>
+              <img src="assets/product-powerbank.jpeg" alt="Powerbank 20000mAh RapidCharge" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3>Powerbank 20000mAh RapidCharge</h3>
+              <div class="product-card__rating" aria-label="Note 4.7 sur 5">
+                <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-half"></i>
+                <span>(421)</span>
+              </div>
+              <div class="product-card__footer">
+                <span class="product-card__price">9 500 FCFA</span>
+                <button class="icon-btn icon-btn--add" aria-label="Ajouter au panier"><i class="ph ph-shopping-cart-simple"></i></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="products__cta">
+          <a href="#" class="btn btn--secondary">Voir tout le catalogue <i class="ph ph-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -100,19 +280,31 @@
         <div class="categories__grid">
           <a href="#" class="category-card">
             <img src="assets/cat-smartphones.jpg" alt="Smartphones et accessoires" loading="lazy">
-            <h3 class="category-card__title">Smartphones &amp; Accessoires</h3>
+            <div class="category-card__overlay">
+              <i class="ph ph-device-mobile"></i>
+              <h3 class="category-card__title">Smartphones &amp; Accessoires</h3>
+            </div>
           </a>
           <a href="#" class="category-card">
             <img src="assets/cat-computers.jpeg" alt="Ordinateurs et périphériques" loading="lazy">
-            <h3 class="category-card__title">Ordinateurs &amp; Périphériques</h3>
+            <div class="category-card__overlay">
+              <i class="ph ph-laptop"></i>
+              <h3 class="category-card__title">Ordinateurs &amp; Périphériques</h3>
+            </div>
           </a>
           <a href="#" class="category-card">
             <img src="assets/cat-audio.jpeg" alt="Casques et enceintes audio" loading="lazy">
-            <h3 class="category-card__title">Audio &amp; Son</h3>
+            <div class="category-card__overlay">
+              <i class="ph ph-headphones"></i>
+              <h3 class="category-card__title">Audio &amp; Son</h3>
+            </div>
           </a>
           <a href="#" class="category-card">
             <img src="assets/cat-smarthome.jpeg" alt="Objets connectés pour la maison" loading="lazy">
-            <h3 class="category-card__title">Maison connectée</h3>
+            <div class="category-card__overlay">
+              <i class="ph ph-house"></i>
+              <h3 class="category-card__title">Maison connectée</h3>
+            </div>
           </a>
         </div>
       </div>
@@ -122,7 +314,7 @@
     <section class="featured-product" id="promotions">
       <div class="container featured-product__inner">
         <div class="featured-product__media">
-          <span class="badge badge--urgent">⚡ Offre limitée — Plus que 7 unités</span>
+          <span class="badge badge--urgent"><i class="ph ph-lightning"></i> Offre limitée — Plus que 7 unités</span>
           <img src="assets/product-headphones.jpeg" alt="Casque sans fil ProSound X2" loading="lazy">
         </div>
 
@@ -135,6 +327,13 @@
             qui isole totalement des distractions extérieures.
           </p>
 
+          <ul class="featured-product__specs">
+            <li><i class="ph ph-check-circle"></i> 40h d'autonomie</li>
+            <li><i class="ph ph-check-circle"></i> Réduction de bruit active</li>
+            <li><i class="ph ph-check-circle"></i> Bluetooth 5.3</li>
+            <li><i class="ph ph-check-circle"></i> Résistant à la transpiration</li>
+          </ul>
+
           <div class="price-block">
             <span class="price price--old">45 000 FCFA</span>
             <span class="price price--new">32 000 FCFA</span>
@@ -142,11 +341,48 @@
           </div>
 
           <p class="countdown" aria-live="polite">
-            Offre valable encore <time datetime="PT2H14M">02:14:36</time>
+            <i class="ph ph-timer"></i> Offre valable encore <time datetime="PT2H14M">02:14:36</time>
           </p>
 
-          <a href="#" class="btn btn--primary btn--large">Je le veux maintenant →</a>
-          <p class="micro-reassurance">Paiement sécurisé · Livraison sous 48h</p>
+          <a href="#" class="btn btn--primary btn--large">Je le veux maintenant <i class="ph ph-arrow-right"></i></a>
+          <p class="micro-reassurance"><i class="ph ph-lock-key"></i> Paiement sécurisé · <i class="ph ph-truck"></i> Livraison sous 48h</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NOTRE HISTOIRE ==================== -->
+    <section class="about">
+      <div class="container about__inner">
+        <div class="about__media">
+          <img src="assets/about-store.png" alt="Intérieur d'une boutique NexTech à Douala" loading="lazy">
+        </div>
+        <div class="about__content">
+          <p class="eyebrow">Notre histoire</p>
+          <h2>Une entreprise camerounaise, pensée pour vous</h2>
+          <p>
+            Fondée à Douala, NexTech est née d'un constat simple : trouver de
+            l'électronique fiable au Cameroun ne devrait pas être un parcours
+            du combattant. Aujourd'hui, nos boutiques à Douala et Yaoundé,
+            ainsi que notre plateforme en ligne, servent des milliers de
+            clients à travers tout le pays.
+          </p>
+          <div class="about__stats">
+            <div class="about-stat">
+              <i class="ph ph-storefront"></i>
+              <strong>2</strong>
+              <span>Boutiques physiques</span>
+            </div>
+            <div class="about-stat">
+              <i class="ph ph-calendar-check"></i>
+              <strong>3 ans</strong>
+              <span>D'expérience</span>
+            </div>
+            <div class="about-stat">
+              <i class="ph ph-package"></i>
+              <strong>25 000+</strong>
+              <span>Colis livrés</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -160,28 +396,61 @@
 
         <div class="benefits__grid">
           <article class="benefit-card">
-            <span class="benefit-card__icon" aria-hidden="true">🎯</span>
+            <span class="benefit-card__icon"><i class="ph ph-target"></i></span>
             <h3>Sélection rigoureuse</h3>
             <p>Chaque produit est testé par notre équipe avant mise en ligne. Pas de mauvaise surprise à la réception.</p>
           </article>
 
           <article class="benefit-card">
-            <span class="benefit-card__icon" aria-hidden="true">💰</span>
+            <span class="benefit-card__icon"><i class="ph ph-currency-circle-dollar"></i></span>
             <h3>Prix négociés directement</h3>
             <p>Nous travaillons sans intermédiaire avec les fabricants — l'économie est reversée directement sur votre prix.</p>
           </article>
 
           <article class="benefit-card">
-            <span class="benefit-card__icon" aria-hidden="true">⚡</span>
+            <span class="benefit-card__icon"><i class="ph ph-truck"></i></span>
             <h3>Livraison rapide, partout au Cameroun</h3>
             <p>De Yaoundé à Douala, comptez 48h. Suivi en temps réel de votre colis.</p>
           </article>
 
           <article class="benefit-card">
-            <span class="benefit-card__icon" aria-hidden="true">💬</span>
+            <span class="benefit-card__icon"><i class="ph ph-chats-circle"></i></span>
             <h3>Un humain, pas un robot</h3>
             <p>Notre support répond en moins de 2h, tous les jours, par WhatsApp ou téléphone.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MOYENS DE PAIEMENT ==================== -->
+    <section class="payment-methods">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Payez comme vous le souhaitez</h2>
+          <p class="section-header__subtitle">Des moyens de paiement adaptés à tous, partout au Cameroun</p>
+        </header>
+
+        <div class="payment-methods__grid">
+          <div class="payment-card">
+            <i class="ph ph-device-mobile-camera"></i>
+            <h3>Orange Money</h3>
+            <p>Paiement instantané depuis votre téléphone</p>
+          </div>
+          <div class="payment-card">
+            <i class="ph ph-device-mobile"></i>
+            <h3>MTN Mobile Money</h3>
+            <p>Simple, rapide et sécurisé</p>
+          </div>
+          <div class="payment-card">
+            <i class="ph ph-credit-card"></i>
+            <h3>Carte bancaire</h3>
+            <p>Visa &amp; Mastercard acceptées</p>
+          </div>
+          <div class="payment-card">
+            <i class="ph ph-hand-coins"></i>
+            <h3>Paiement à la livraison</h3>
+            <p>Payez en espèces à réception, à Douala &amp; Yaoundé</p>
+          </div>
         </div>
       </div>
     </section>
@@ -192,22 +461,45 @@
         <header class="section-header">
           <h2 class="section-header__title">Ils nous font confiance</h2>
           <p class="section-header__subtitle" aria-label="Note moyenne 4.8 sur 5">
-            ★★★★★ 4.8/5 sur 1 240 avis vérifiés
+            <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-half"></i>
+            4.8/5 sur 1 240 avis vérifiés
           </p>
         </header>
 
         <div class="testimonials__grid">
           <blockquote class="testimonial-card">
+            <i class="ph ph-quotes testimonial-card__quote-icon"></i>
             <p>« Commande reçue en 2 jours à Douala, emballage soigné, produit identique aux photos. Deuxième achat chez eux, aucun regret. »</p>
             <footer>
-              <cite>Awa K.</cite> <span class="verified-badge">Cliente vérifiée</span>
+              <span class="testimonial-avatar" aria-hidden="true">AK</span>
+              <div>
+                <cite>Awa K.</cite>
+                <span class="verified-badge"><i class="ph ph-seal-check"></i> Cliente vérifiée</span>
+              </div>
             </footer>
           </blockquote>
 
           <blockquote class="testimonial-card">
+            <i class="ph ph-quotes testimonial-card__quote-icon"></i>
             <p>« J'étais sceptique pour un achat électronique en ligne au Cameroun, mais le service client m'a rassuré à chaque étape. »</p>
             <footer>
-              <cite>Junior M.</cite> <span class="verified-badge">Client vérifié</span>
+              <span class="testimonial-avatar" aria-hidden="true">JM</span>
+              <div>
+                <cite>Junior M.</cite>
+                <span class="verified-badge"><i class="ph ph-seal-check"></i> Client vérifié</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <i class="ph ph-quotes testimonial-card__quote-icon"></i>
+            <p>« Le paiement par Orange Money a rendu tout l'achat très simple. Livré à Yaoundé en 48h comme promis. »</p>
+            <footer>
+              <span class="testimonial-avatar" aria-hidden="true">SN</span>
+              <div>
+                <cite>Sandrine N.</cite>
+                <span class="verified-badge"><i class="ph ph-seal-check"></i> Cliente vérifiée</span>
+              </div>
             </footer>
           </blockquote>
         </div>
@@ -229,23 +521,38 @@
 
         <div class="faq__list">
           <details class="faq-item">
-            <summary>Quels sont les délais de livraison ?</summary>
+            <summary>Quels sont les délais de livraison ?
+              <i class="ph ph-plus faq-item__icon"></i>
+            </summary>
             <p>48h à Yaoundé et Douala, 3-5 jours dans les autres régions.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Comment puis-je payer ?</summary>
+            <summary>Comment puis-je payer ?
+              <i class="ph ph-plus faq-item__icon"></i>
+            </summary>
             <p>Mobile Money (Orange, MTN), carte bancaire, ou paiement à la livraison selon votre zone.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Puis-je retourner un produit ?</summary>
+            <summary>Puis-je retourner un produit ?
+              <i class="ph ph-plus faq-item__icon"></i>
+            </summary>
             <p>Oui, sous 14 jours si le produit est non utilisé, dans son emballage d'origine.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Les produits sont-ils garantis ?</summary>
+            <summary>Les produits sont-ils garantis ?
+              <i class="ph ph-plus faq-item__icon"></i>
+            </summary>
             <p>Tous nos produits bénéficient d'une garantie constructeur de 2 ans.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Puis-je récupérer ma commande en boutique ?
+              <i class="ph ph-plus faq-item__icon"></i>
+            </summary>
+            <p>Oui, le retrait gratuit est possible dans nos boutiques de Douala et Yaoundé sous 24h.</p>
           </details>
         </div>
       </div>
@@ -254,6 +561,7 @@
     <!-- ==================== NEWSLETTER ==================== -->
     <section class="newsletter">
       <div class="container newsletter__inner">
+        <i class="ph ph-envelope-simple-open newsletter__icon"></i>
         <h2>-10% sur votre première commande</h2>
         <p>Inscrivez-vous à notre newsletter et recevez votre code promo immédiatement, plus nos offres exclusives en avant-première.</p>
 
@@ -273,11 +581,12 @@
     <div class="container footer__inner">
       <div class="footer__col">
         <a href="/" class="logo logo--footer">NexTech</a>
-        <p>Votre boutique d'électronique de confiance au Cameroun.</p>
+        <p>Votre boutique d'électronique de confiance, présente à Douala et Yaoundé.</p>
         <div class="footer__socials">
-          <a href="#" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
         </div>
       </div>
 
@@ -291,10 +600,18 @@
       </nav>
 
       <div class="footer__col">
+        <h4>Nos boutiques</h4>
+        <ul>
+          <li><i class="ph ph-map-pin"></i> Akwa, Douala</li>
+          <li><i class="ph ph-map-pin"></i> Bastos, Yaoundé</li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:contact@nextech.cm">contact@nextech.cm</a></li>
-          <li><a href="tel:+237600000000">+237 6XX XXX XXX</a></li>
+          <li><a href="mailto:contact@nextech.cm"><i class="ph ph-envelope-simple"></i> contact@nextech.cm</a></li>
+          <li><a href="tel:+237600000000"><i class="ph ph-phone"></i> +237 6XX XXX XXX</a></li>
         </ul>
       </div>
     </div>
@@ -304,9 +621,14 @@
     </div>
   </footer>
 
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/237600000000" class="whatsapp-float" aria-label="Nous contacter sur WhatsApp" target="_blank" rel="noopener">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+  </a>
+
   <!-- Sticky CTA mobile (affiché en CSS uniquement sur petits écrans) -->
   <div class="sticky-cta" aria-hidden="true">
-    <a href="#promotions" class="btn btn--primary btn--full">Voir les offres →</a>
+    <a href="#promotions" class="btn btn--primary btn--full">Voir les offres <i class="ph ph-arrow-right"></i></a>
   </div>
 
   <script src="script.js"></script>

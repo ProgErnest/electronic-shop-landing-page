@@ -29,6 +29,9 @@
   --color-warning: #ECC94B;
   --color-info: #3182CE;
 
+  /* ---------- COULEURS — Canal de contact ---------- */
+  --color-whatsapp: #25D366; /* couleur officielle, très reconnue au Cameroun */
+
   /* ---------- TYPOGRAPHIE — Familles ---------- */
   --font-heading: 'Exo 2', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -146,6 +149,11 @@ a {
   white-space: nowrap;
   border: 0;
 }
+/* ============================================================
+   NEXTECH — STYLES.CSS
+   Nécessite design-tokens.css chargé AVANT ce fichier.
+   ============================================================ */
+
 /* ============================================================
    BOUTONS — composant réutilisé partout
    ============================================================ */
@@ -842,6 +850,577 @@ a {
 }
 
 /* ============================================================
+   BANDEAU D'ANNONCE (top bar)
+   ============================================================ */
+
+.announcement-bar {
+  background-color: var(--color-text);
+  color: #FFFFFF;
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+}
+
+.announcement-bar p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.announcement-bar__sep {
+  opacity: 0.4;
+}
+
+/* ============================================================
+   HERO — mini stats + icônes
+   ============================================================ */
+
+.hero__mini-stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.mini-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.mini-stat i {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+}
+
+.mini-stat strong {
+  display: block;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+
+.mini-stat span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   MARQUES PARTENAIRES
+   ============================================================ */
+
+.brands {
+  padding-block: var(--space-12);
+  border-bottom: 1px solid var(--color-bg-alt);
+}
+
+.brands__label {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.brands__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-name:hover {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+
+/* ============================================================
+   PRODUITS — grille "Meilleures ventes"
+   ============================================================ */
+
+.products {
+  padding-block: var(--space-24);
+  background-color: var(--color-bg-alt);
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.product-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-card__media {
+  position: relative;
+}
+
+.product-card__media img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--color-bg-alt);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.wishlist-btn:hover {
+  color: var(--color-accent);
+}
+
+.badge--bestseller {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.badge--new {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background-color: var(--color-accent-2);
+  color: var(--color-text);
+}
+
+.badge--popular {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background-color: var(--color-info);
+  color: #FFFFFF;
+}
+
+.badge--promo {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background-color: var(--color-success);
+  color: #FFFFFF;
+}
+
+.product-card__body {
+  padding: var(--space-4);
+}
+
+.product-card__body h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-warning);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-3);
+}
+
+.product-card__rating span {
+  color: var(--color-text-muted);
+  margin-left: var(--space-1);
+  font-size: var(--text-xs);
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.product-card__price {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary);
+}
+
+.product-card__price-old {
+  font-size: var(--text-sm);
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  margin-right: var(--space-2);
+}
+
+.icon-btn--add {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  padding: 0;
+}
+
+.icon-btn--add:hover {
+  background-color: #E86000;
+}
+
+.products__cta {
+  text-align: center;
+  margin-top: var(--space-12);
+}
+
+/* ============================================================
+   CATEGORIES — overlay avec icône
+   ============================================================ */
+
+.category-card {
+  position: relative;
+}
+
+.category-card img {
+  filter: brightness(0.75);
+}
+
+.category-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.category-card__overlay i {
+  font-size: var(--text-3xl);
+}
+
+.category-card__overlay .category-card__title {
+  padding: 0;
+  color: #FFFFFF;
+}
+
+/* ============================================================
+   PRODUIT VEDETTE — specs list + icônes
+   ============================================================ */
+
+.featured-product__specs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.featured-product__specs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+.featured-product__specs i {
+  color: var(--color-success);
+  font-size: var(--text-lg);
+}
+
+.badge--urgent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.countdown i,
+.micro-reassurance i {
+  vertical-align: -2px;
+}
+
+/* ============================================================
+   NOTRE HISTOIRE (ABOUT)
+   ============================================================ */
+
+.about {
+  padding-block: var(--space-24);
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.about__media img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__content .eyebrow {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.about__content h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.about__content p {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.about__stats {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.about-stat i {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.about-stat strong {
+  font-size: var(--text-2xl);
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
+}
+
+.about-stat span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   MOYENS DE PAIEMENT
+   ============================================================ */
+
+.payment-methods {
+  padding-block: var(--space-24);
+  background-color: var(--color-bg-alt);
+}
+
+.payment-methods__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.payment-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.payment-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.payment-card i {
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+.payment-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.payment-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   TEMOIGNAGES — icônes citation + avatar initiales
+   ============================================================ */
+
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-card__quote-icon {
+  font-size: var(--text-2xl);
+  color: var(--color-tertiary);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-card footer {
+  align-items: center;
+}
+
+.verified-badge i {
+  color: var(--color-success);
+  vertical-align: -2px;
+}
+
+.section-header__subtitle i {
+  color: var(--color-warning);
+}
+
+/* ============================================================
+   FAQ — icône plus/moins Phosphor
+   ============================================================ */
+
+.faq-item summary::after {
+  content: none;
+}
+
+.faq-item__icon {
+  color: var(--color-primary);
+  font-size: var(--text-lg);
+  transition: transform var(--transition-fast);
+}
+
+.faq-item[open] .faq-item__icon {
+  transform: rotate(45deg);
+}
+
+/* ============================================================
+   NEWSLETTER — icône
+   ============================================================ */
+
+.newsletter__icon {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+/* ============================================================
+   HEADER — icônes (ajustements)
+   ============================================================ */
+
+.icon-btn i {
+  font-size: var(--text-xl);
+}
+
+.nav-toggle__icon-close {
+  display: none;
+}
+
+.primary-nav.is-open ~ .header__actions .nav-toggle__icon-open,
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon-open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon-close {
+  display: inline-block;
+}
+
+/* ============================================================
+   FOOTER — icônes contact/localisation
+   ============================================================ */
+
+.footer__col ul i {
+  color: var(--color-accent-2);
+  margin-right: var(--space-1);
+}
+
+.footer__socials a {
+  font-size: var(--text-lg);
+  transition: color var(--transition-fast);
+}
+
+.footer__socials a:hover {
+  color: var(--color-accent-2);
+}
+
+/* ============================================================
+   BOUTON WHATSAPP FLOTTANT
+   ============================================================ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-2xl);
+  box-shadow: var(--shadow-lg);
+  z-index: 90;
+  transition: transform var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* ============================================================
    STICKY CTA MOBILE — masqué par défaut
    ============================================================ */
 
@@ -865,16 +1444,26 @@ a {
 /* Tablette */
 @media (max-width: 1024px) {
   .hero__inner,
-  .featured-product__inner {
+  .featured-product__inner,
+  .about__inner {
     grid-template-columns: 1fr;
   }
 
-  .hero__media {
+  .hero__media,
+  .about__media {
     order: -1;
   }
 
   .footer__inner {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-product__specs {
+    grid-template-columns: 1fr;
+  }
+
+  .brands__row {
+    gap: var(--space-6);
   }
 }
 
@@ -950,6 +1539,27 @@ a {
   /* Espace en bas de page pour ne pas cacher le footer sous le sticky CTA */
   .site-footer {
     padding-bottom: var(--space-16);
+  }
+
+  .hero__mini-stats {
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  .announcement-bar p {
+    font-size: var(--text-xs);
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-methods__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whatsapp-float {
+    bottom: calc(var(--space-16) + var(--space-4));
   }
 }
 
