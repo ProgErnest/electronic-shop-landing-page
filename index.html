@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexTech — Votre technologie, sans compromis</title>
+  <meta name="description" content="Découvrez notre sélection d'appareils électroniques testés, garantis et livrés en 48h. Plus de 12 000 clients satisfaits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design-tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="/" class="logo">NexTech</a>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <ul class="primary-nav__list">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#produits">Produits</a></li>
+          <li><a href="#promotions">Promotions</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Rechercher">🔍</button>
+        <button class="icon-btn cart-btn" aria-label="Panier">
+          🛒 <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="accueil">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Nouvelle collection 2026</p>
+          <h1 class="hero__title">Votre technologie, sans compromis.</h1>
+          <p class="hero__subtitle">
+            Des appareils électroniques testés, garantis et livrés chez vous
+            en 48h. Rejoignez plus de 12 000 clients satisfaits.
+          </p>
+          <div class="hero__actions">
+            <a href="#produits" class="btn btn--primary">Découvrir la sélection →</a>
+            <a href="#promotions" class="btn btn--secondary">Voir les meilleures ventes</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <img src="assets/hero-product.jpg" alt="Casque audio et smartphone dernière génération présentés sur fond neutre" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BANDEAU DE REASSURANCE ==================== -->
+    <section class="trust-bar" aria-label="Garanties et services">
+      <div class="container trust-bar__inner">
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true">🚚</span>
+          <span>Livraison offerte dès 50 000 FCFA</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true">🔒</span>
+          <span>Paiement 100% sécurisé</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true">↩️</span>
+          <span>Retours gratuits sous 14 jours</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon" aria-hidden="true">🛡️</span>
+          <span>Garantie constructeur 2 ans</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATEGORIES ==================== -->
+    <section class="categories" id="produits">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Explorez nos catégories</h2>
+          <p class="section-header__subtitle">Tout ce qu'il faut pour équiper votre quotidien</p>
+        </header>
+
+        <div class="categories__grid">
+          <a href="#" class="category-card">
+            <img src="assets/cat-smartphones.jpg" alt="Smartphones et accessoires" loading="lazy">
+            <h3 class="category-card__title">Smartphones &amp; Accessoires</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="assets/cat-computers.jpeg" alt="Ordinateurs et périphériques" loading="lazy">
+            <h3 class="category-card__title">Ordinateurs &amp; Périphériques</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="assets/cat-audio.jpeg" alt="Casques et enceintes audio" loading="lazy">
+            <h3 class="category-card__title">Audio &amp; Son</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="assets/cat-smarthome.jpeg" alt="Objets connectés pour la maison" loading="lazy">
+            <h3 class="category-card__title">Maison connectée</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUIT VEDETTE ==================== -->
+    <section class="featured-product" id="promotions">
+      <div class="container featured-product__inner">
+        <div class="featured-product__media">
+          <span class="badge badge--urgent">⚡ Offre limitée — Plus que 7 unités</span>
+          <img src="assets/product-headphones.jpeg" alt="Casque sans fil ProSound X2" loading="lazy">
+        </div>
+
+        <div class="featured-product__content">
+          <p class="eyebrow">Coup de cœur du mois</p>
+          <h2>Casque ProSound X2 — Réduction de bruit active</h2>
+          <p class="featured-product__description">
+            Conçu pour les longues journées de travail comme pour le voyage,
+            le ProSound X2 offre 40h d'autonomie et une réduction de bruit
+            qui isole totalement des distractions extérieures.
+          </p>
+
+          <div class="price-block">
+            <span class="price price--old">45 000 FCFA</span>
+            <span class="price price--new">32 000 FCFA</span>
+            <span class="price-discount">-29%</span>
+          </div>
+
+          <p class="countdown" aria-live="polite">
+            Offre valable encore <time datetime="PT2H14M">02:14:36</time>
+          </p>
+
+          <a href="#" class="btn btn--primary btn--large">Je le veux maintenant →</a>
+          <p class="micro-reassurance">Paiement sécurisé · Livraison sous 48h</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AVANTAGES / DIFFERENCIATION ==================== -->
+    <section class="benefits">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Ce qui nous différencie</h2>
+        </header>
+
+        <div class="benefits__grid">
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">🎯</span>
+            <h3>Sélection rigoureuse</h3>
+            <p>Chaque produit est testé par notre équipe avant mise en ligne. Pas de mauvaise surprise à la réception.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">💰</span>
+            <h3>Prix négociés directement</h3>
+            <p>Nous travaillons sans intermédiaire avec les fabricants — l'économie est reversée directement sur votre prix.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">⚡</span>
+            <h3>Livraison rapide, partout au Cameroun</h3>
+            <p>De Yaoundé à Douala, comptez 48h. Suivi en temps réel de votre colis.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">💬</span>
+            <h3>Un humain, pas un robot</h3>
+            <p>Notre support répond en moins de 2h, tous les jours, par WhatsApp ou téléphone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PREUVE SOCIALE / TEMOIGNAGES ==================== -->
+    <section class="testimonials" id="avis">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Ils nous font confiance</h2>
+          <p class="section-header__subtitle" aria-label="Note moyenne 4.8 sur 5">
+            ★★★★★ 4.8/5 sur 1 240 avis vérifiés
+          </p>
+        </header>
+
+        <div class="testimonials__grid">
+          <blockquote class="testimonial-card">
+            <p>« Commande reçue en 2 jours à Douala, emballage soigné, produit identique aux photos. Deuxième achat chez eux, aucun regret. »</p>
+            <footer>
+              <cite>Awa K.</cite> <span class="verified-badge">Cliente vérifiée</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>« J'étais sceptique pour un achat électronique en ligne au Cameroun, mais le service client m'a rassuré à chaque étape. »</p>
+            <footer>
+              <cite>Junior M.</cite> <span class="verified-badge">Client vérifié</span>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat"><strong>12 000+</strong><span>Clients satisfaits</span></div>
+          <div class="stat"><strong>98%</strong><span>Taux de satisfaction</span></div>
+          <div class="stat"><strong>48h</strong><span>Livraison moyenne</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Questions fréquentes</h2>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq-item">
+            <summary>Quels sont les délais de livraison ?</summary>
+            <p>48h à Yaoundé et Douala, 3-5 jours dans les autres régions.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment puis-je payer ?</summary>
+            <p>Mobile Money (Orange, MTN), carte bancaire, ou paiement à la livraison selon votre zone.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Puis-je retourner un produit ?</summary>
+            <p>Oui, sous 14 jours si le produit est non utilisé, dans son emballage d'origine.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Les produits sont-ils garantis ?</summary>
+            <p>Tous nos produits bénéficient d'une garantie constructeur de 2 ans.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter">
+      <div class="container newsletter__inner">
+        <h2>-10% sur votre première commande</h2>
+        <p>Inscrivez-vous à notre newsletter et recevez votre code promo immédiatement, plus nos offres exclusives en avant-première.</p>
+
+        <form class="newsletter__form" action="#" method="post">
+          <label for="newsletter-email" class="visually-hidden">Votre adresse email</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Votre adresse email" required>
+          <button type="submit" class="btn btn--primary">Recevoir mon code promo</button>
+        </form>
+        <p class="micro-reassurance">Aucun spam. Désinscription en 1 clic.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="/" class="logo logo--footer">NexTech</a>
+        <p>Votre boutique d'électronique de confiance au Cameroun.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Liens légaux">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@nextech.cm">contact@nextech.cm</a></li>
+          <li><a href="tel:+237600000000">+237 6XX XXX XXX</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>NexTech © 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA mobile (affiché en CSS uniquement sur petits écrans) -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a href="#promotions" class="btn btn--primary btn--full">Voir les offres →</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
