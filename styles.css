@@ -14,9 +14,9 @@
   --color-bg-alt: #F0F4F8; 
 
   --color-text: #1A202C;
-  --color-text-muted: #71
+  --color-text-muted: #71;
 
-  --color-accent: #FF6B00; 
+  --color-accent: #FF6B00 ; 
   --color-accent-2: #00D4FF;      
 
   /* Text to use on accent backgrounds — never white on orange/green */
@@ -81,7 +81,7 @@
   --shadow-lg: 0 10px 24px rgba(26, 32, 44, 0.14);
 
   /* ---------- CONTENEUR / LAYOUT ---------- */
-  --container-max: 1920px;
+  --container-max: 1400px;
   --container-padding: var(--space-4);
 
   /* ---------- TRANSITIONS ---------- */
@@ -453,9 +453,17 @@ a {
 
 .category-card__title {
   padding: var(--space-4);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   color: var(--color-text);
   text-align: center;
+
+  
+}
+.category-card__overlay{
+  background-color: #002f873d;
+  width: 100%;
+  padding: var(--space-1);
+  
 }
 
 /* ============================================================
@@ -479,6 +487,9 @@ a {
 }
 
 .featured-product__media img {
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
@@ -766,7 +777,7 @@ a {
 .newsletter__form input {
   flex: 1;
   padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   border: none;
   font-size: var(--text-base);
   font-family: var(--font-body);
@@ -1051,7 +1062,7 @@ a {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: var(--color-warning);
+  color: var(--color-error);
   font-size: var(--text-sm);
   margin-bottom: var(--space-3);
 }
@@ -1188,7 +1199,12 @@ a {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
-
+.about__media{
+  order: 2;
+}
+.about__content{
+  order: 1;
+}
 .about__content .eyebrow {
   color: var(--color-primary);
   font-weight: var(--font-semibold);
@@ -1196,6 +1212,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: var(--space-2);
+  order: 1;
 }
 
 .about__content h2 {
